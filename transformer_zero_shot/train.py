@@ -110,7 +110,7 @@ if __name__ == '__main__':
     g = tf.Graph()
 
     with g.as_default():
-        with tf.Session() as sess:
+        with tf.compat.v1.Session() as sess:
             with tf.name_scope('DataGenerate'):
                 VocabMaker = ZeroShotVocabMaker(vocab_path=hp.vocab_path, minimum_count=hp.minimum_count)
                 DataSetMaker = TFDataSetMaker(zeroshot_voca2int=VocabMaker.zeroshot_voca2int,
