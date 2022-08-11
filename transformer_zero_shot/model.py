@@ -66,7 +66,7 @@ class Transformer(object):
                            drop_rate,
                            is_training,
                            scope='Transformer_body',
-                           reuse=tf.AUTO_REUSE):
+                           reuse=True):
 
         with tf.variable_scope(name_or_scope=scope, reuse=reuse):
             with tf.name_scope('ENCODER'):
